@@ -1,7 +1,7 @@
 var sites = [{ name: "Public Library of Science (PLOS)", url: "http://alm.plos.org", api_key: "3pezRBRXdyzYW6ztfwft" },
              { name: "Copernicus Publications", url: "http://metricus.copernicus.org", api_key: "Dxkwpz8FRe7JHw4EGC1v" },
              { name: "ALM Data Challenge<br/>(10,000 random CrossRef DOIs)", url: "http://almhack.crowdometer.org", api_key: "qzcE4ciMj438fLPqyRdE" },
-             { name: "CrossRef Labs", url: "http://alm.labs.crossref.org", api_key: "64aJra4M7NPHVAWxxCZ5" }]
+             { name: "CrossRef Labs", url: "http://alm.labs.crossref.org", api_key: "64aJra4M7NPHVAWxxCZ5" }];
 
 // queue requests, using queue.js library: https://github.com/mbostock/queue
 var queue = queue();
@@ -29,12 +29,12 @@ function ready(error, data) {
   for (var i = 0; i < sites.length; i++) {
     var tr = d3.select("#status tbody").append("tr");
 
-    status = (data[i]["error"]) ? "Unknown" : "OK";
+    var status = (data[i]["error"]) ? "Unknown" : "OK";
     label = (data[i]["error"]) ? "label-warning" : "label-success";
     version = (data[i]["data"] === null) ? "n/a" : data[i]["data"]["version"];
     articles_count = (data[i]["data"] === null) ? "n/a" : data[i]["data"]["articles_count"];
 
-    var row = { name: sites[i]["name"], url: sites[i]["url"], status: status, label: label, version: version, articles_count: articles_count}
+    var row = { name: sites[i]["name"], url: sites[i]["url"], status: status, label: label, version: version, articles_count: articles_count};
 
     tr.append("td")
       .html(function(d) { return row["name"]; });
