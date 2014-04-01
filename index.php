@@ -23,7 +23,7 @@
       <thead>
         <tr>
           <th class="name">Name</th>
-          <th class="name">API DOCS</th>
+          <th class="name">API Docs</th>
           <th class="status">Status</th>
         </tr>
       </thead>

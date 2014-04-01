@@ -8,21 +8,24 @@ $(document).ready(function() {
           var tr = d3.select("#status tbody").append("tr");
 
           tr.append("td").html(data[i]["name"]);
-          tr.append("td").html(data[i]["api_docs"]);
+          tr.append("td").html("<a href=" + data[i]["api_docs"] + ">" + data[i]["api_docs"] + "</a>");
 
           var label = "label";
+          var status = '';
 
           if(data[i]["status"] === true) {
             label += "-success";
+            status = 'OK';
           }
           else {
             label += "-danger";
+            status = 'NOT OK';
           }
 
           tr.append("td")
           .append("span")
           .attr("class", "label " + label)
-          .text(data[i]["status"]);
+          .text(status);
 
 
 
