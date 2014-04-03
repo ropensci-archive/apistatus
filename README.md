@@ -10,3 +10,15 @@ api status dashboard
 
 3. statuses.json is consumed by status.js and the table #status in index.php is appended accordingly
 
+
+Based on http://articlemetrics.github.io/status/ by @mfenner.
+
+**Running the app**
+
+Start up a server in your shell by doing 
+
+```
+php -S localhost:8000
+```
+
+Then navigate to http://localhost:8000/
