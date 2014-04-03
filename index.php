@@ -5,19 +5,18 @@
 <!DOCTYPE html5>
 <html>
   <head>
-    <title>ropensci | status</title>
+    <title>rOpenSci | Status</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="/js/queue.v1.min.js"></script>
     <script src="/js/status.js"></script>
   </head>
 
   <div class="results"></div>
 
   <body>
-    <p>Below is the live status information for the publicly available ALM instances.</p>
+    <p>Below is the live status information for the publicly available rOpenSci apis.</p>
 
     <table id="status" class="table">
       <thead>
