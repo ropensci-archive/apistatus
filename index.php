@@ -24,6 +24,8 @@
           <th class="name">Name</th>
           <th class="name">API Docs</th>
           <th class="status">Status</th>
+          <th class="status">Response Time (seconds)</th>
+          <th class="status">Time of Request</th>
         </tr>
       </thead>
       <tbody>

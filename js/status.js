@@ -27,6 +27,8 @@ $(document).ready(function() {
           .attr("class", "label " + label)
           .text(status);
 
+          tr.append("td").html(data[i]['trans_time']);
+          tr.append("td").html(data[i]['curr_time']);
 
 
           //var s = checkUrl("http://www.antweb.org/api");
