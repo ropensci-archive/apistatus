@@ -54,7 +54,11 @@ class apistatus {
         $api->trans_time = $status['trans_time'];
       }
 
-      $api->curr_time = date('m/d/Y H:i:s');
+      date_default_timezone_set(@date_default_timezone_get());
+
+      $tz = date_default_timezone_get();
+
+      $api->curr_time = date('m/d/Y H:i:s') . ' ' . $tz;
 
     }
 
