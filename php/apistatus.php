@@ -54,7 +54,7 @@ class apistatus {
         $api->trans_time = $status['trans_time'];
       }
 
-      $api->curr_time = date('m/d/Y h:i:s');
+      $api->curr_time = date('m/d/Y H:i:s');
 
     }
 
